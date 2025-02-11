@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Video from './video'
 
 export const Hero = () => {
@@ -9,7 +8,8 @@ export const Hero = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-       <Video src={"hero-video.mp4"} />
+        <Video src={"hero-video.mp4"} className="hidden sm:block" />
+        <Video src={"hero-mobile-view-hero.mp4"} className="block sm:hidden" />
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
       </div>
 
